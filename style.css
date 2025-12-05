@@ -146,6 +146,23 @@ body, html {
     font-size: 0.9em;
     color: #777;
 }
+.service-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #18402d;
+}
+
+.service-details ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.service-details ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #3d3d3d;
+}
+
 
 /* WHY CHOOSE US */
 .quote {
