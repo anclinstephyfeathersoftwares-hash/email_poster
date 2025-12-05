@@ -203,29 +203,30 @@ body, html {
 
 .contact-area {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* space increased */
+    margin-top: 20px;
+}
+
+.contact-detail {
+    color: rgb(14, 15, 14);
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .contact-detail i {
-    color: #172c5a;
-    margin-right: 5px;
+    margin-right: 6px;
 }
 
 .cta-button {
-    background: #4CAF50;
+    background: green;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.cta-button:hover {
-    background: #45a049;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 /* RESPONSIVE */
