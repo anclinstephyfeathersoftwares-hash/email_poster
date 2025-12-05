@@ -1,0 +1,235 @@
+/* --- Global Reset and Base Styles --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5; /* Light grey/blue background for the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Outer Poster Frame (Mimics the outer shadow/border) --- */
+.poster-frame {
+    width: 90%;
+    max-width: 900px; /* Max width of the poster */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 15px solid #d4e0ff; /* Light blue outer border effect */
+    background-color: #ffffff; /* Inner white background */
+    box-sizing: border-box;
+}
+
+/* --- Poster Container --- */
+.poster-container {
+    padding: 0;
+    color: #333;
+}
+
+/* --- Header Section (Logo Bar and Image) --- */
+.logo-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #172c5a; /* Dark Blue */
+}
+
+.logo i {
+    color: #4CAF50; /* Green accent for the icon */
+    margin-right: 5px;
+}
+
+.tagline-header {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Image Banner Styling --- */
+.image-banner {
+    /* Height and background-image are set in the HTML <style> block */
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Semi-transparent dark overlay for text contrast */
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+.image-text {
+    position: relative; /* Brings text above the overlay */
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for the text itself */
+    margin: 0;
+}
+
+/* --- Main Content Section (Two Columns) --- */
+.content-main {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on small screens */
+    margin-top: 0;
+}
+
+/* Shared styling for columns */
+.expertise-column, .why-us-column {
+    padding: 30px;
+    flex: 1; /* Takes up equal space */
+    min-width: 300px; /* Prevents columns from getting too small */
+}
+
+.expertise-column {
+    background-color: #ffffff;
+    border-right: 1px solid #eee;
+}
+
+.why-us-column {
+    background-color: #172c5a; /* Dark Blue Background */
+    color: white;
+}
+
+/* Headings in Main Content */
+.content-main h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Expertise List (Left Column) */
+.expertise-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-column li {
+    font-size: 1em;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.expertise-column i {
+    color: #172c5a; /* Dark Blue icon color */
+    margin-right: 10px;
+    width: 20px; /* Ensures icon alignment */
+    text-align: center;
+}
+
+/* Why Us Content (Right Column) */
+.quote {
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    margin: 30px 0;
+    padding: 15px;
+    border: 2px solid #4CAF50; /* Green border for emphasis */
+    color: #4CAF50;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.checkmark-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.checkmark-list li {
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+
+.checkmark-list i {
+    color: #4CAF50; /* Green checkmark */
+    margin-right: 10px;
+}
+
+
+/* --- Footer Section (CTA and Contact) --- */
+.footer {
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+}
+
+.cta-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #172c5a;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-detail {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-detail i {
+    color: #172c5a;
+    margin-right: 5px;
+}
+
+.cta-button {
+    background-color: #4CAF50; /* Green CTA Button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* --- Responsiveness (For smaller screens) --- */
+@media (max-width: 700px) {
+    .content-main {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .expertise-column {
+        border-right: none;
+        border-bottom: 1px solid #eee; /* Add separator when stacked */
+    }
+
+    .contact-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-detail, .cta-button {
+        width: 100%; /* Make contact items full width */
+        margin-top: 5px;
+    }
+}
