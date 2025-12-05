@@ -240,3 +240,81 @@ body, html {
         align-items: flex-start;
     }
 }
+
+
+/* Large Tablets (<=1024px) */
+@media (max-width: 1024px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-text {
+        font-size: 32px;
+    }
+}
+
+/* Tablets (<=768px) */
+@media (max-width: 768px) {
+    .logo-bar {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .image-banner {
+        height: 250px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkmark-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Mobile (<=576px) */
+@media (max-width: 576px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-banner {
+        height: 200px;
+    }
+
+    .image-text {
+        font-size: 26px;
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .contact-area {
+        flex-direction: column;
+    }
+}
+
+/* Small Mobile (<=400px) */
+@media (max-width: 400px) {
+    .image-text {
+        font-size: 22px;
+    }
+
+    .logo-bar {
+        padding: 10px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+}
+@media (min-width: 320px) and (max-width: 400px) {
+    .image-text {     
+        font-size: 18px;
+    }
+    .poster-frame {
+        border: none;
+    }
+}
