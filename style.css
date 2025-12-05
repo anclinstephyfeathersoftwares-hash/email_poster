@@ -53,7 +53,6 @@ body, html {
 
 /* --- Image Banner Styling --- */
 .image-banner {
-    /* Height and background-image are set in the HTML <style> block */
     position: relative;
     color: white;
 }
@@ -64,42 +63,44 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Semi-transparent dark overlay for text contrast */
     background: rgba(0, 0, 0, 0.4); 
 }
 
 .image-text {
-    position: relative; /* Brings text above the overlay */
+    position: relative;
     font-size: 2.5em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for the text itself */
+    background-color: rgba(0, 0, 0, 0.6); 
     margin: 0;
 }
 
 /* --- Main Content Section (Two Columns) --- */
 .content-main {
     display: flex;
-    flex-wrap: wrap; /* Allows columns to stack on small screens */
+    flex-wrap: wrap; 
     margin-top: 0;
 }
 
 /* Shared styling for columns */
 .expertise-column, .why-us-column {
     padding: 30px;
-    flex: 1; /* Takes up equal space */
-    min-width: 300px; /* Prevents columns from getting too small */
+    flex: 1; 
+    min-width: 300px;
 }
 
+/* HIGHLIGHTED EXPERTISE SECTION */
 .expertise-column {
-    background-color: #ffffff;
+    background-color: #f7f9fd; 
     border-right: 1px solid #eee;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); 
+    border-left: 5px solid #172c5a; 
 }
 
 .why-us-column {
-    background-color: #172c5a; /* Dark Blue Background */
+    background-color: #172c5a; 
     color: white;
 }
 
@@ -112,26 +113,57 @@ body, html {
     text-transform: uppercase;
 }
 
-/* Expertise List (Left Column) */
-.expertise-column ul {
-    list-style: none;
-    padding: 0;
+/* --- Service Card List Styling (Expertise Content) --- */
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6f1;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover */
 }
 
-.expertise-column li {
-    font-size: 1em;
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
+/* HOVER EFFECT for Service Card */
+.service-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    transform: translateY(-3px); /* Lifts the card */
+    border-color: #4CAF50; /* Green border highlight */
 }
 
-.expertise-column i {
-    color: #172c5a; /* Dark Blue icon color */
-    margin-right: 10px;
-    width: 20px; /* Ensures icon alignment */
-    text-align: center;
+.icon-box {
+    font-size: 1.5em;
+    color: #172c5a; /* Icon primary color */
+    margin-right: 15px;
+    padding: 8px;
+    background-color: #e6f0ff; /* Light background for the icon */
+    border-radius: 4px;
+    line-height: 1;
 }
 
-/* Why Us Content (Right Column) */
+.service-card:hover .icon-box {
+    color: #4CAF50; /* Green icon on hover */
+    background-color: #ffffff;
+}
+
+.service-details h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #172c5a;
+}
+
+.service-details p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+    line-height: 1.3;
+}
+
+
+/* --- Why Us Content (Right Column) --- */
 .quote {
     font-size: 1.3em;
     font-weight: 600;
@@ -139,25 +171,28 @@ body, html {
     text-align: center;
     margin: 30px 0;
     padding: 15px;
-    border: 2px solid #4CAF50; /* Green border for emphasis */
+    border: 2px solid #4CAF50; 
     color: #4CAF50;
     background-color: rgba(255, 255, 255, 0.1);
 }
-
-.checkmark-list {
+   .checkmark-list {
     list-style: none;
-    padding: 0;
-    text-align: left;
+    /* FIX: Remove default browser padding for list items */
+    padding: 0; 
+    /* Ensures the list block itself is left-aligned within the column */
+    text-align: left; 
     margin-top: 30px;
 }
 
 .checkmark-list li {
     font-size: 1.1em;
     padding: 5px 0;
+    /* Ensure no extra margin pushes it right */
+    margin-left: 0; 
 }
 
 .checkmark-list i {
-    color: #4CAF50; /* Green checkmark */
+    color: #4CAF50; 
     margin-right: 10px;
 }
 
@@ -197,7 +232,7 @@ body, html {
 }
 
 .cta-button {
-    background-color: #4CAF50; /* Green CTA Button */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -215,12 +250,13 @@ body, html {
 /* --- Responsiveness (For smaller screens) --- */
 @media (max-width: 700px) {
     .content-main {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column; 
     }
 
     .expertise-column {
         border-right: none;
-        border-bottom: 1px solid #eee; /* Add separator when stacked */
+        border-bottom: 1px solid #eee; 
+        border-left: none; 
     }
 
     .contact-area {
@@ -229,7 +265,7 @@ body, html {
     }
 
     .contact-detail, .cta-button {
-        width: 100%; /* Make contact items full width */
+        width: 100%; 
         margin-top: 5px;
     }
 }
